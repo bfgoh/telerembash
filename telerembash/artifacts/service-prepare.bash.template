@@ -24,7 +24,7 @@ echo "creating pid dir: ${PID_DIR}"
 mkdir -p $PID_DIR; chown ${DAEMON_USER}.${DAEMON_USER} ${PID_DIR};
 echo "creating python .venv for ${DAEMON_USER}..."
 su -l ${DAEMON_USER} -s /bin/bash -c "\
-
+  curl -LsSf https://astral.sh/uv/install.sh | sh;
   uv venv;                 \
   source .venv/bin/activate;             \
   pip install -U pip;                    \
