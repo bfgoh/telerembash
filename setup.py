@@ -7,8 +7,12 @@
 import pathlib
 import sys
 
-from setuptools import setup, find_packages, convert_path
+from setuptools import setup, find_packages
 
+try:
+    from setuptools import convert_path
+except ImportError:
+    from setuptools._distutils.util import convert_path
 
 WORK_DIR = pathlib.Path(__file__).parent
 MOD_NAME = "telerembash"
