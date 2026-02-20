@@ -1,0 +1,18 @@
+[project]
+name = "telerembash"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.0"
+dependencies = [
+    "aiogram==2.12.1",
+    "coloredlogs==15.0",
+    "py-params",
+    "pyotp==2.6.0",
+    "python-daemon==2.3.0",
+    "pyyaml==6.0.3",
+    "qrcode==6.1",
+]
+
+[tool.uv.sources]
+py-params = { git = "https://github.com/dillonarcuity/py-params.git" }
